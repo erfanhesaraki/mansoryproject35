@@ -1,0 +1,1320 @@
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+// header
+header {
+    background-color: #2b2b2a;
+    z-index: 8;
+
+    .top-li {
+        position: relative;
+        color: #fff !important;
+        transition: all 0.3s;
+        &::after {
+            width: 0%;
+            height: 1px;
+            content: " ";
+            position: absolute;
+            bottom: 0;
+            left: 33%;
+            background-color: #d4b170;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        &::before {
+            width: 0%;
+            height: 1px;
+            content: " ";
+            position: absolute;
+            bottom: 0;
+            right: 33%;
+            background-color: #d4b170;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        &:hover {
+            color: #d4b170 !important;
+
+            &::after {
+                width: 20%;
+                opacity: 1;
+            }
+            &::before {
+                width: 20%;
+                opacity: 1;
+            }
+        }
+    }
+
+    nav {
+        ul {
+            li {
+                a {
+                    position: relative;
+                    color: #fff !important;
+                    transition: all 0.3s;
+                    &::after {
+                        width: 0%;
+                        height: 1px;
+                        content: " ";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        background-color: #d4b170;
+                        opacity: 0;
+                        transition: all 0.3s;
+                    }
+                    &::before {
+                        width: 0%;
+                        height: 1px;
+                        content: " ";
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        background-color: #d4b170;
+                        opacity: 0;
+                        transition: all 0.3s;
+                    }
+                }
+                &:hover {
+                    a {
+                        color: #d4b170 !important;
+
+                        &::after {
+                            width: 50%;
+                            opacity: 1;
+                        }
+                        &::before {
+                            width: 50%;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    div {
+        a {
+            svg {
+                fill: white;
+                transition: all 0.3s;
+                &:hover {
+                    fill: #d4b170;
+                }
+            }
+        }
+    }
+}
+// header
+// main
+main {
+    // menu-header
+    .menu-header {
+        width: 450px !important;
+        height: 100vh !important;
+        border: 1px solid rgba(128, 128, 128, 0.26);
+        z-index: 9;
+        position: fixed;
+        top: 0;
+        right: -450px;
+        background-color: white !important;
+        transition: 0.4s linear;
+    }
+
+    @media screen and (max-width: 768px) {
+        .menu-header {
+            width: 300px !important;
+        }
+    }
+    @media screen and (max-width: 576px) {
+        .menu-header {
+            width: 200px !important;
+        }
+    }
+
+    .menu-header-is-active {
+        right: 0 !important;
+    }
+    // menu-header
+
+    div {
+        div {
+            &:nth-of-type(1) {
+                div {
+                    &:nth-of-type(2) {
+                        span {
+                            display: flex;
+                            width: 30px;
+                            height: 2px;
+                            background-color: white;
+                            position: relative;
+
+                            &::after {
+                                content: " ";
+                                width: 100%;
+                                height: 2px;
+                                position: absolute;
+                                margin: 6px 0px;
+                                top: -15px;
+                                left: 0;
+                                background-color: black;
+                                transform-origin: left;
+                                transform: rotate(37deg);
+                            }
+
+                            &::before {
+                                content: " ";
+                                width: 100%;
+                                height: 2px;
+                                position: absolute;
+                                margin: 6px 0px;
+                                bottom: -15px;
+                                left: 0;
+                                background-color: black;
+                                transform-origin: left;
+                                transform: rotate(-37deg);
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(2) {
+                div {
+                    div {
+                        &:nth-of-type(1) {
+                            input {
+                                background-color: #f2f2f2;
+                                border: none;
+                                outline: none;
+                                border-bottom: 1px solid #2b2b2a;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:nth-of-type(3) {
+                ul {
+                    li {
+                        border-bottom: 1px solid rgb(225, 225, 225);
+
+                        &:not(.notredcolor) {
+                            a {
+                                position: relative;
+                                transition: all 0.7s;
+                                font-size: 20px !important;
+
+                                &::after {
+                                    width: 0%;
+                                    height: 1px;
+                                    content: " ";
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    background-color: #d4b170;
+                                    opacity: 0;
+                                    transition: all 0.7s;
+                                }
+
+                                &::before {
+                                    width: 0%;
+                                    height: 1px;
+                                    content: " ";
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 0;
+                                    background-color: #d4b170;
+                                    opacity: 0;
+                                    transition: all 0.7s;
+                                }
+                            }
+                        }
+                        &:not(.notredcolor) {
+                            &:hover {
+                                a {
+                                    color: #d4b170 !important;
+
+                                    &::after {
+                                        width: 50%;
+                                        opacity: 1;
+                                    }
+                                    &::before {
+                                        width: 50%;
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+
+                        &:nth-of-type(2),
+                        &:nth-of-type(4),
+                        &:nth-of-type(8) {
+                            a {
+                                color: #f60d00 !important;
+
+                                position: relative;
+                                transition: all 0.7s;
+                                font-size: 20px !important;
+
+                                &::after {
+                                    width: 0%;
+                                    height: 1px;
+                                    content: " ";
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    background-color: #f60d00;
+                                    opacity: 0;
+                                    transition: all 0.7s;
+                                }
+
+                                &::before {
+                                    width: 0%;
+                                    height: 1px;
+                                    content: " ";
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 0;
+                                    background-color: #f60d00;
+                                    opacity: 0;
+                                    transition: all 0.7s;
+                                }
+                            }
+                        }
+                        &:nth-of-type(2),
+                        &:nth-of-type(4),
+                        &:nth-of-type(8) {
+                            &:hover {
+                                a {
+                                    &::after {
+                                        width: 50%;
+                                        opacity: 1;
+                                    }
+                                    &::before {
+                                        width: 50%;
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(4) {
+                ul {
+                    li {
+                        a {
+                            position: relative;
+                            transition: all 0.7s;
+                            font-size: 20px !important;
+
+                            &::after {
+                                width: 0%;
+                                height: 1px;
+                                content: " ";
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                background-color: #d4b170;
+                                opacity: 0;
+                                transition: all 0.7s;
+                            }
+
+                            &::before {
+                                width: 0%;
+                                height: 1px;
+                                content: " ";
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                background-color: #d4b170;
+                                opacity: 0;
+                                transition: all 0.7s;
+                            }
+                        }
+                        &:hover {
+                            a {
+                                color: #d4b170 !important;
+
+                                &::after {
+                                    width: 50%;
+                                    opacity: 1;
+                                }
+                                &::before {
+                                    width: 50%;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // window
+    .window {
+        height: 100vh;
+        margin-top: 40px !important;
+
+        ul {
+            bottom: 3px;
+            left: 50% !important;
+            transform: translate(-50%);
+            li {
+                box-shadow: 0px 0px 20px 2px hsla(0, 0%, 0%, 0.474);
+                border: 1px solid black;
+
+                position: relative !important;
+
+                #text-img {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #2b2b2a;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+    // window
+
+    // slider
+    .slider {
+        overflow: hidden !important;
+        aspect-ratio: 2/1;
+        div {
+            figure {
+                position: absolute;
+                animation-duration: 25s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                bottom: -100%;
+
+                &:nth-of-type(1) {
+                    animation-name: img1;
+                }
+                &:nth-of-type(2) {
+                    animation-name: img2;
+                }
+                &:nth-of-type(3) {
+                    animation-name: img3;
+                }
+                &:nth-of-type(4) {
+                    animation-name: img4;
+                }
+                &:nth-of-type(5) {
+                    animation-name: img5;
+                }
+
+                @keyframes img1 {
+                    0% {
+                        bottom: 0;
+                    }
+                    20% {
+                        bottom: 0;
+                    }
+                    26% {
+                        bottom: 100%;
+                    }
+                    26.0001% {
+                        bottom: -100%;
+                    }
+                    95% {
+                        bottom: -100%;
+                    }
+                    100% {
+                        bottom: 0;
+                    }
+                }
+
+                @keyframes img2 {
+                    0% {
+                        bottom: -100%;
+                    }
+                    20% {
+                        bottom: -100%;
+                    }
+                    26% {
+                        bottom: 0;
+                    }
+                    45% {
+                        bottom: 0;
+                    }
+                    51% {
+                        bottom: 100%;
+                    }
+                    51.0001% {
+                        bottom: -100%;
+                    }
+                    100% {
+                        bottom: -100%;
+                    }
+                }
+
+                @keyframes img3 {
+                    0% {
+                        bottom: -100%;
+                    }
+                    45% {
+                        bottom: -100%;
+                    }
+                    51% {
+                        bottom: 0;
+                    }
+                    65% {
+                        bottom: 0;
+                    }
+                    71% {
+                        bottom: 100%;
+                    }
+                    71.0001% {
+                        bottom: -100%;
+                    }
+                    100% {
+                        bottom: -100%;
+                    }
+                }
+
+                @keyframes img4 {
+                    0% {
+                        bottom: -100%;
+                    }
+                    65% {
+                        bottom: -100%;
+                    }
+                    71% {
+                        bottom: 0;
+                    }
+                    85% {
+                        bottom: 0;
+                    }
+                    91% {
+                        bottom: 100%;
+                    }
+                    91.0001% {
+                        bottom: -100%;
+                    }
+                    100% {
+                        bottom: -100%;
+                    }
+                }
+
+                @keyframes img5 {
+                    0% {
+                        bottom: -100%;
+                    }
+                    85% {
+                        bottom: -100%;
+                    }
+                    91% {
+                        bottom: 0;
+                    }
+
+                    95% {
+                        bottom: 0;
+                    }
+
+                    100% {
+                        bottom: 100%;
+                    }
+                }
+
+                &::after {
+                    width: 100%;
+                    height: 100%;
+                    content: " ";
+                    position: absolute;
+                    left: 0%;
+                    top: 0%;
+                    background-color: #2c2c2c3f;
+                }
+
+                .text-slider {
+                    position: absolute;
+                    top: 10%;
+                    left: 3%;
+                    font-family: "Times New Roman", Times, serif;
+                    color: white;
+                    z-index: 3;
+                }
+
+                div {
+                    div {
+                        div {
+                            &:nth-of-type(3) {
+                                div {
+                                    div {
+                                        &:nth-of-type(1) {
+                                            div {
+                                                height: 1px;
+                                                background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, #fff);
+                                                transform: scale(1);
+                                                transform-origin: right;
+                                                transition: 0.4s;
+                                            }
+                                        }
+                                        &:nth-of-type(2) {
+                                            div {
+                                                height: 1px;
+                                                background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 0, #fff);
+                                                transform: scale(1);
+                                                transform-origin: left;
+                                                transition: 0.4s;
+                                            }
+                                        }
+                                    }
+
+                                    position: relative;
+                                    transition: 0.4s;
+
+                                    a {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        position: relative;
+                                        color: #d4b170;
+                                        // color: white;
+                                        border: 1px solid #d4b170;
+                                        z-index: 7;
+                                        transition: 0.4s;
+
+                                        &::before {
+                                            content: " ";
+                                            position: absolute;
+                                            width: 0%;
+                                            height: 100%;
+                                            opacity: 0;
+                                            left: 0;
+                                            top: 0;
+                                            background-color: #d4b170;
+                                            z-index: -1;
+                                            transition: 0.4s;
+                                        }
+
+                                        &::after {
+                                            content: " ";
+                                            position: absolute;
+                                            width: 0%;
+                                            height: 100%;
+                                            right: 0;
+                                            top: 0;
+                                            background-color: #d4b170;
+                                            z-index: -1;
+                                            opacity: 0;
+                                            transition: 0.4s;
+                                        }
+                                    }
+
+                                    &:hover {
+                                        div {
+                                            &:nth-of-type(1),
+                                            &:nth-of-type(2) {
+                                                div {
+                                                    transform: scale(0);
+                                                }
+                                            }
+                                        }
+
+                                        a {
+                                            &::after {
+                                                width: 50%;
+                                                opacity: 1;
+                                            }
+                                            &::before {
+                                                width: 50%;
+                                                opacity: 1;
+                                            }
+                                            color: black;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // slider
+
+    // Discover
+    .Discover {
+        background-image: url("../asset/img/section-bg.jpg");
+        background-attachment: fixed;
+
+        div {
+            div {
+                div {
+                    &:nth-of-type(3) {
+                        div {
+                            div {
+                                &:nth-of-type(1) {
+                                    div {
+                                        height: 1px;
+                                        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, #fff);
+                                        transform: scale(1);
+                                        transform-origin: right;
+                                        transition: 0.4s;
+                                    }
+                                }
+                                &:nth-of-type(2) {
+                                    div {
+                                        height: 1px;
+                                        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 0, #fff);
+                                        transform: scale(1);
+                                        transform-origin: left;
+                                        transition: 0.4s;
+                                    }
+                                }
+                            }
+                            position: relative;
+                            transition: 0.4s;
+
+                            a {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                position: relative;
+                                color: #d4b170;
+                                // color: white;
+                                border: 1px solid #d4b170;
+                                z-index: 7;
+                                transition: 0.4s;
+
+                                &::before {
+                                    content: " ";
+                                    position: absolute;
+                                    width: 0%;
+                                    height: 100%;
+                                    opacity: 0;
+                                    left: 0;
+                                    top: 0;
+                                    background-color: #d4b170;
+                                    z-index: -1;
+                                    transition: 0.4s;
+                                }
+
+                                &::after {
+                                    content: " ";
+                                    position: absolute;
+                                    width: 0%;
+                                    height: 100%;
+                                    right: 0;
+                                    top: 0;
+                                    background-color: #d4b170;
+                                    z-index: -1;
+                                    opacity: 0;
+                                    transition: 0.4s;
+                                }
+                            }
+
+                            &:hover {
+                                div {
+                                    &:nth-of-type(1),
+                                    &:nth-of-type(2) {
+                                        div {
+                                            transform: scale(0);
+                                        }
+                                    }
+                                }
+
+                                a {
+                                    &::after {
+                                        width: 50%;
+                                        opacity: 1;
+                                    }
+                                    &::before {
+                                        width: 50%;
+                                        opacity: 1;
+                                    }
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // Discover
+    // CarsForSale
+    .CarsForSale {
+        background: #2b2b2a;
+        div {
+            div {
+                div {
+                    &:nth-of-type(2) {
+                        div {
+                            div {
+                                article {
+                                    figure {
+                                        overflow: hidden;
+                                        position: relative;
+                                        transition: 0.7s;
+                                        div {
+                                            position: absolute;
+                                            bottom: -20%;
+                                            left: 50%;
+                                            transform: translate(-50%, -40%);
+                                            transition: all 0.8s ease-in-out;
+                                            svg {
+                                                fill: white;
+                                            }
+                                        }
+
+                                        &::after {
+                                            content: " ";
+                                            position: absolute;
+                                            width: 100%;
+                                            height: 0%;
+                                            bottom: 0%;
+                                            left: 0%;
+                                            transition: 0.8s;
+                                            background: linear-gradient(
+                                                to bottom,
+                                                rgba(64, 64, 64, 0) 0%,
+                                                rgba(64, 64, 64, 0.05) 3%,
+                                                rgba(64, 64, 64, 0.1) 7%,
+                                                rgba(64, 64, 64, 0.2) 13%,
+                                                rgba(64, 64, 64, 0.3) 21%,
+                                                rgba(64, 64, 64, 0.4) 29%,
+                                                rgba(64, 64, 64, 0.5) 39%,
+                                                rgba(64, 64, 64, 0.57) 47%,
+                                                rgba(64, 64, 64, 0.6) 50%,
+                                                rgba(64, 64, 64, 0.7) 62%,
+                                                rgba(64, 64, 64, 0.8) 73%,
+                                                rgba(64, 64, 64, 0.9) 85%,
+                                                #404040 100%
+                                            );
+                                        }
+                                    }
+
+                                    figcaption {
+                                        background-color: #404040;
+                                        div {
+                                            div {
+                                                div {
+                                                    div {
+                                                        &:nth-of-type(2) {
+                                                            div {
+                                                                &:nth-of-type(1) {
+                                                                    div {
+                                                                        height: 1px;
+                                                                        background: linear-gradient(
+                                                                            90deg,
+                                                                            rgba(255, 255, 255, 0) 0,
+                                                                            #fff
+                                                                        );
+                                                                        transform: scale(1);
+                                                                        transform-origin: right;
+                                                                        transition: 0.4s;
+                                                                    }
+                                                                }
+                                                                &:nth-of-type(2) {
+                                                                    div {
+                                                                        height: 1px;
+                                                                        background: linear-gradient(
+                                                                            -90deg,
+                                                                            rgba(255, 255, 255, 0) 0,
+                                                                            #fff
+                                                                        );
+                                                                        transform: scale(1);
+                                                                        transform-origin: left;
+                                                                        transition: 0.4s;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &:hover {
+                                        figure {
+                                            &:after {
+                                                height: 100%;
+                                            }
+
+                                            div {
+                                                bottom: 40%;
+                                            }
+                                        }
+
+                                        figcaption {
+                                            div {
+                                                div {
+                                                    div {
+                                                        div {
+                                                            &:nth-of-type(2) {
+                                                                div {
+                                                                    &:nth-of-type(1),
+                                                                    &:nth-of-type(2) {
+                                                                        div {
+                                                                            transform: scale(0);
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-of-type(3) {
+                        div {
+                            div {
+                                &:nth-of-type(1) {
+                                    div {
+                                        height: 1px;
+                                        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, #fff);
+                                        transform: scale(1);
+                                        transform-origin: right;
+                                        transition: 0.4s;
+                                    }
+                                }
+                                &:nth-of-type(2) {
+                                    div {
+                                        height: 1px;
+                                        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 0, #fff);
+                                        transform: scale(1);
+                                        transform-origin: left;
+                                        transition: 0.4s;
+                                    }
+                                }
+                            }
+                            position: relative;
+                            transition: 0.4s;
+
+                            a {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                position: relative;
+                                color: #d4b170;
+                                // color: white;
+                                border: 1px solid #d4b170;
+                                z-index: 7;
+                                transition: 0.4s;
+
+                                &::before {
+                                    content: " ";
+                                    position: absolute;
+                                    width: 0%;
+                                    height: 100%;
+                                    opacity: 0;
+                                    left: 0;
+                                    top: 0;
+                                    background-color: #d4b170;
+                                    z-index: -1;
+                                    transition: 0.4s;
+                                }
+
+                                &::after {
+                                    content: " ";
+                                    position: absolute;
+                                    width: 0%;
+                                    height: 100%;
+                                    right: 0;
+                                    top: 0;
+                                    background-color: #d4b170;
+                                    z-index: -1;
+                                    opacity: 0;
+                                    transition: 0.4s;
+                                }
+                            }
+
+                            &:hover {
+                                div {
+                                    &:nth-of-type(1),
+                                    &:nth-of-type(2) {
+                                        div {
+                                            transform: scale(0);
+                                        }
+                                    }
+                                }
+
+                                a {
+                                    &::after {
+                                        width: 50%;
+                                        opacity: 1;
+                                    }
+                                    &::before {
+                                        width: 50%;
+                                        opacity: 1;
+                                    }
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // CarsForSale
+
+    // MansoryNews
+    .MansoryNews {
+        background-image: url("../asset/img/section-bg.jpg");
+        background-attachment: fixed;
+        div {
+            div {
+                div {
+                    &:nth-of-type(2) {
+                        div {
+                            div {
+                                article {
+                                    figure {
+                                        overflow: hidden;
+                                        position: relative;
+                                        transition: 0.7s;
+                                        &::after {
+                                            content: " ";
+                                            display: flex;
+                                            position: absolute;
+                                            width: 100%;
+                                            height: 0%;
+                                            bottom: 0%;
+                                            left: 0%;
+                                            transition: 0.8s;
+                                            background: linear-gradient(
+                                                to bottom,
+                                                rgba(255, 255, 255, 0) 0%,
+                                                rgba(255, 255, 255, 0.05) 3%,
+                                                rgba(255, 255, 255, 0.1) 7%,
+                                                rgba(255, 255, 255, 0.2) 13%,
+                                                rgba(255, 255, 255, 0.3) 21%,
+                                                rgba(255, 255, 255, 0.4) 29%,
+                                                rgba(255, 255, 255, 0.5) 39%,
+                                                rgba(255, 255, 255, 0.57) 47%,
+                                                rgba(255, 255, 255, 0.6) 50%,
+                                                rgba(255, 255, 255, 0.7) 62%,
+                                                rgba(255, 255, 255, 0.8) 73%,
+                                                rgba(255, 255, 255, 0.9) 85%,
+                                                #fff 100%
+                                            );
+                                        }
+
+                                        div {
+                                            position: absolute;
+                                            bottom: -20%;
+                                            left: 50%;
+                                            transform: translate(-50%, -40%);
+                                            transition: all 0.8s ease-in-out;
+                                            z-index: 3;
+                                            svg {
+                                                fill: black;
+                                            }
+                                        }
+                                    }
+
+                                    figcaption {
+                                        background-color: white;
+                                        div {
+                                            div {
+                                                h3 {
+                                                    em {
+                                                        position: relative;
+                                                        &::after {
+                                                            width: 0%;
+                                                            height: 1px;
+                                                            position: absolute;
+                                                            content: " ";
+                                                            left: 0;
+                                                            bottom: 0;
+                                                            background-color: black;
+                                                            transition: 0.4s;
+                                                        }
+                                                        &::before {
+                                                            width: 0%;
+                                                            height: 1px;
+                                                            position: absolute;
+                                                            content: " ";
+                                                            right: 0;
+                                                            bottom: 0;
+                                                            background-color: black;
+                                                            transition: 0.4s;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &:hover {
+                                        figure {
+                                            div {
+                                                bottom: 40%;
+                                            }
+                                            &::after {
+                                                height: 100%;
+                                            }
+                                        }
+
+                                        figcaption {
+                                            background-color: white;
+                                            div {
+                                                div {
+                                                    h3 {
+                                                        em {
+                                                            &::after,
+                                                            &::before {
+                                                                width: 50%;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-of-type(3) {
+                        div {
+                            div {
+                                &:nth-of-type(1) {
+                                    div {
+                                        height: 1px;
+                                        background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, #fff);
+                                        transform: scale(1);
+                                        transform-origin: right;
+                                        transition: 0.4s;
+                                    }
+                                }
+                                &:nth-of-type(2) {
+                                    div {
+                                        height: 1px;
+                                        background: linear-gradient(-90deg, rgba(255, 255, 255, 0) 0, #fff);
+                                        transform: scale(1);
+                                        transform-origin: left;
+                                        transition: 0.4s;
+                                    }
+                                }
+                            }
+                            position: relative;
+                            transition: 0.4s;
+
+                            a {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                position: relative;
+                                color: #d4b170;
+                                // color: white;
+                                border: 1px solid #d4b170;
+                                z-index: 7;
+                                transition: 0.4s;
+
+                                &::before {
+                                    content: " ";
+                                    position: absolute;
+                                    width: 0%;
+                                    height: 100%;
+                                    opacity: 0;
+                                    left: 0;
+                                    top: 0;
+                                    background-color: #d4b170;
+                                    z-index: -1;
+                                    transition: 0.4s;
+                                }
+
+                                &::after {
+                                    content: " ";
+                                    position: absolute;
+                                    width: 0%;
+                                    height: 100%;
+                                    right: 0;
+                                    top: 0;
+                                    background-color: #d4b170;
+                                    z-index: -1;
+                                    opacity: 0;
+                                    transition: 0.4s;
+                                }
+                            }
+
+                            &:hover {
+                                div {
+                                    &:nth-of-type(1),
+                                    &:nth-of-type(2) {
+                                        div {
+                                            transform: scale(0);
+                                        }
+                                    }
+                                }
+
+                                a {
+                                    &::after {
+                                        width: 50%;
+                                        opacity: 1;
+                                    }
+                                    &::before {
+                                        width: 50%;
+                                        opacity: 1;
+                                    }
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // MansoryNews
+
+    // @media
+    @media screen and (max-width: 320px) {
+    }
+    @media screen and (max-width: 375px) {
+    }
+    @media screen and (max-width: 425px) {
+        .slider {
+            .text-slider {
+                div {
+                    div {
+                        &:nth-of-type(3) {
+                            &::after {
+                                right: -45px !important;
+                            }
+                            &::before {
+                                left: -45px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+    }
+    @media screen and (max-width: 992px) {
+    }
+    @media screen and (min-width: 993px) {
+        .slider {
+            .text-slider {
+                top: 20%;
+                left: 3%;
+                div {
+                    div {
+                        &:nth-of-type(3) {
+                            &::after {
+                                right: -47px !important;
+                            }
+                            &::before {
+                                left: -47px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// main
+
+// @media
+// footer
+footer {
+    section {
+        background-image: url("../asset/img/footer-bg.png");
+        div {
+            div {
+                div {
+                    &:nth-of-type(1) {
+                        div {
+                            color: #fff;
+                            span {
+                                transition: 0.4s;
+                                &:nth-of-type(1) {
+                                    &:hover {
+                                        color: #2199e8;
+                                    }
+                                }
+                                &:nth-of-type(2) {
+                                    &:hover {
+                                        color: #bc2a8d;
+                                    }
+                                }
+                                &:nth-of-type(3) {
+                                    &:hover {
+                                        color: #dc4433;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:nth-of-type(2) {
+                        ul {
+                            li {
+                                a {
+                                    position: relative;
+                                    color: #fff !important;
+                                    transition: all 0.3s;
+                                    &::after {
+                                        width: 0%;
+                                        height: 1px;
+                                        content: " ";
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: 0;
+                                        background-color: #d4b170;
+                                        opacity: 0;
+                                        transition: all 0.3s;
+                                    }
+                                    &::before {
+                                        width: 0%;
+                                        height: 1px;
+                                        content: " ";
+                                        position: absolute;
+                                        bottom: 0;
+                                        right: 0;
+                                        background-color: #d4b170;
+                                        opacity: 0;
+                                        transition: all 0.3s;
+                                    }
+                                }
+                                &:hover {
+                                    a {
+                                        color: #d4b170 !important;
+
+                                        &::after {
+                                            width: 50%;
+                                            opacity: 1;
+                                        }
+                                        &::before {
+                                            width: 50%;
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// footer
+
+// develop by erfan hesaraki 09190275164 erfan.hesaraki@gmail.com
